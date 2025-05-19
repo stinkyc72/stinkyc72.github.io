@@ -79,7 +79,7 @@ body {
 
 .mascot {
   display: block;
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
   height: auto;
   margin: 0 auto 40px auto;
@@ -192,14 +192,37 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media screen and (max-width: 767px) and (max-width: 1023px) {
 
   .section-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 
   .mascot {
-    max-width: 150px;
+    max-width: 130px;
+  }
+
+  .tokenomics-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-grid {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+
+  .mascot {
+    max-width: 100px;
   }
 
   .tokenomics-stats {
